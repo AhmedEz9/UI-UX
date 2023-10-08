@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dialogStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+  </head>
+<body>
+    <header>
+        <nav class="home-navbar">
+            <h2 id="logo">The Tagine House.</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            <div class="profile">
+                <a href="#" class="user" id="open_dialog"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <div class="hero-image">
+           <h3 id="hero-h">Tagine World.</h3>
+           <p id="hero-t">Join us to discover a world of flavorful dishes!</p>
+       </div>
+        <div class="foodmenu-t">
+        </div>
+        <div class="buttons-lists">
+           <button>Salades</button>
+            <button>Tagines</button>
+            <button>Couscous</button>
+            <button>Harira Soup</button>
+            <button>Desserts</button>
+        </div>
+        <div class="detail-wrapper">
+          <div class="detail-card">
+              <img src="./tagine.jpg" alt="Tagines" class="detail-img">
+              <div class="detail-desc">
+                  <div class="detail-name">
+                      <h4>Tagines</h4>
+                      <p class="detail-sub">Stews cooked in a special pot, combining meats or vegetables with spices and fruits. Chicken tagine with lemons and olives or lamb tagine with prunes or Vegetables Tagine.</p>
+                      <p class="price">19.99€</p>
+                  </div>
+              </div>
+          </div>
+          <div class="detail-card">
+              <img src="./Pastilla.jpg" alt="Pastilla" class="detail-img">
+              <div class="detail-desc">
+                  <div class="detail-name">
+                      <h4>Pastilla</h4>
+                      <p class="detail-sub">A pie mixing sweet and savory flavors, typically made with spiced meat, eggs, and almonds, encased in thin pastry and topped with sugar and cinnamon.</p>
+                      <p class="price">25.00€</p>
+                  </div>
+              </div>
+          </div>
+          <div class="detail-card">
+              <img src="./harira.jpg" alt="Harira" class="detail-img">
+              <div class="detail-desc">
+                  <div class="detail-name">
+                      <h4>Harira Soup</h4>
+                      <p class="detail-sub">A traditional Moroccan soup made of tomatoes, lentils, chickpeas, and various herbs and spices, often including meat.</p>
+                      <p class="price">9.00€</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="detail-card">
+              <img src="./sweets.jpg" alt="Sweets" class="detail-img">
+              <div class="detail-desc">
+                  <div class="detail-name">
+                      <h4>Sweets</h4>
+                      <p class="detail-sub">Baklava, rich pastries with nuts and honey, and Maamoul, cookies filled with dates or nuts, showcasing a mix of textures and flavors.</p>
+                      <p class="price">12.00€</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="info">
+            <img  id="logoimg" src="logo.png">
+            <img class="foodimg" src="Food.jpg" alt="Image of Moroccan food.">
+            <h2 class="info-text">More about us</h2>
+            <p class="info-text"></b><br>The Tagine House embodies the fusion of authentic Moroccan flavors and contemporary culinary art. Every dish is a journey, an exploration of the rich, aromatic, and diverse cuisine of a storied culture. Our space is where tradition and modernity meet, offering guests not just a meal, but an special experience.</p>
+        </div>
+    </main>
+    <footer>
+        <p>Ahmed Ezzaroui. All rights reserved.</p>
+    </footer>
+    <dialog>
+        <img src="Avatar-Profile-PNG.png" alt="Illustration of Location Services" id="dialog-img" />
+        <h2 id="dialog_title" class="h2">Account login</h2>
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Username: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-example">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password"  required  pattern="^(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"/>
+            </div>
+            <div class="flex flex-space-between">
+                <button id="close_dialog">Close</button>
+                <button type="submit" id="confirm_dialog" class="cta">Login</button>
+            </div>
+          </form>
+    </dialog>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

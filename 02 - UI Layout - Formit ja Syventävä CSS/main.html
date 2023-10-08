@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dialogStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+  </head>
+<body>
+    <header>
+        <nav class="home-navbar">
+            <h2 id="logo">The Tagine House.</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+        </nav>
+    </header>
+    <main>
+        <p id="message">Coming Soooooooon</p>
+        <button id="open_dialog">Open Dialog</button>
+        <div class="info">
+            <img  id="logoimg" src="logo.png">
+            <img class="foodimg" src="Food.jpg" alt="image of food.">
+            <h2 class="info-text">More about us<br><b>Our story</b><br></h2>
+            <p class="info-text"></b><br>The Tagine House embodies the fusion of authentic Moroccan flavors and contemporary culinary art. Every dish is a journey, an exploration of the rich, aromatic, and diverse cuisine of a storied culture. Our space is where tradition and modernity meet, offering guests not just a meal, but an special experience.</p>
+        </div>
+    </main>
+    <footer>
+        <p>Ahmed Ezzaroui. All rights reserved.</p>
+    </footer>
+    <dialog>
+        <img src="Avatar-Profile-PNG.png" alt="Illustration of Location Services" id="dialog-img" />
+        <h2 id="dialog_title" class="h2">Account login</h2>
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Username: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-example">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password"  required  pattern="^(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"/>
+            </div>
+            <div class="flex flex-space-between">
+                <button id="close_dialog">Close</button>
+                <button type="submit" id="confirm_dialog" class="cta">Login</button>
+            </div>
+
+
+
+          </form>
+
+    </dialog>
+</body>
+</html>
