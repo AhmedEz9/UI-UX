@@ -20,6 +20,8 @@
   --dark-color-bg: rgb(81, 55, 65);
   --grey-color: rgb(128, 107, 114);
   --leading: 0.025em;
+  --bg-color: #ffffff;
+  --text-color: #000000;
 }
 
 header, main, footer {
@@ -28,7 +30,12 @@ header, main, footer {
 }
 
 body {
-  background-color: var(--redlight);
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
 body:has(dialog[open]) {

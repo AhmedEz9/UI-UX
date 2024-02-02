@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=NewFont&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="new-hero">
+      <div class="new-image" id="image1" data-type='parallax' data-speed='10'>
+      <div class="new-image" id="image2" data-type='parallax' data-speed='20'>
+      <div class="new-image" id="image3" data-type='parallax' data-speed='40'>
+      <div class="new-image" id="image4" data-type='parallax' data-speed='80'>
+      <div class="new-image" id="image5" data-type='parallax' data-speed='100'>
+      <div class="new-image" id="image6" data-type='parallax' data-speed='0'>
+      <div class="new-image" id="image7" data-type='parallax' data-speed='0'>
+    </div>
+    <main>
+      <h1>Greetings!</h1>
+      <p>
+        Scroll up Scroll down &#128516; .
+      </p>
+    </main>
+    <div class='new-mouseparallax'>
+      <h2>Mouse parallax</h2>
+    </div>
+
+<script>
+    window.addEventListener('scroll', function (event) {
+  var top = this.pageYOffset;
+  console.log(top);
+
+  var layers = document.querySelectorAll('[data-type="parallax"]');
+  var layer, speed, yPos;
+  for (var i = 0; i < layers.length; i++) {
+    layer = layers[i];
+    speed = layer.getAttribute('data-speed');
+    var yPos = -((top * speed) / 100);
+    layer.setAttribute(
+      'style',
+      //   tranlateY(yPos + 'px')
+      'transform: translate3d(0px, ' + yPos + 'px, 0px)'
+    );
+  }
+});
+
+
+
+</script>
+  </body>
+</html>

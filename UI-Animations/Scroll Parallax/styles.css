@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+html,
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'NewFont', sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+main{
+  display: block;
+  background-color: rgb(101, 101, 101);
+  color: whitesmoke;
+  position: relative;
+  z-index: 10;
+  padding: 40px;
+  margin-top: -5;
+}
+
+.new-hero{
+  height: 900px;
+  background-color: rosybrown;
+}
+
+.new-image{
+  width: 100%;
+  height: 900px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#image1 {
+  background-image: url(img/background.png);
+  background-size: cover;
+  background-position: top center;
+}
+#image2 {
+  background-image: url(img/ilu_02.png);
+}
+#image3 {
+  background-image: url(img/ilu_03.png);
+}
+#image4 {
+  background-image: url(img/ilu_04.png);
+}
+#image5 {
+  background-image: url(img/ilu_05.png);
+}
+#image6 {
+  background-image: url(img/ilu_05.png);
+}
+#image7 {
+  background-image: url(img/ilu_06.png);
+  background-size: 30rem;
+  background-position: right bottom;
+}
+
+.new-mouseparallax{
+  margin-top: -50px;
+  width: 100%;
+  height: 900px;
+  background-color: gray;
+}
