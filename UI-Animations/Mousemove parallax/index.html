@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Mouse parallax effect</title>
+</head>
+
+<body>
+
+    <div class="parallax-section">
+        <div class="background-image-1"></div>
+    </div>
+    <div>
+        <main>
+            <p>Don't let the poor fish be hunted by the eagle.
+            </p>
+        </main>
+    </div>
+    <div class="parallax-section">
+        <div class="background-image-2">
+            <div class='custom-parallax'>
+                <h2>Custom Parallax</h2>
+                <div class="parallax-wrapper">
+                    <div class="parallax-layer-1"></div>
+                    <div class="parallax-layer-2"></div>
+                    <div id="custom-mouse"></div><br>
+                    <div id="custom-mouse-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function (event) {
+            var top = this.pageYOffset;
+            console.log(top);
+
+            var layers = document.querySelectorAll('[data-type="parallax"]');
+            var layer, speed, yPos;
+            for (var i = 0; i < layers.length; i++) {
+                layer = layers[i];
+                speed = layer.getAttribute('data-speed');
+                var yPos = -((top * speed) / 100);
+                layer.setAttribute(
+                    'style',
+                    'transform: translate3d(0px, ' + yPos + 'px, 0px)'
+                );
+            }
+        });
+
+        const customMouseLeft = document.querySelector('#custom-mouse');
+        const customMouseParallax = document.querySelector('.custom-parallax');
+        const customMouseCenter = document.querySelector('#custom-mouse-center');
+        const customEagle = document.querySelector('.parallax-layer-1');
+        const customFish = document.querySelector('.parallax-layer-2');
+
+        document.addEventListener('mousemove', (evt) => {
+
+            let cx = customMouseParallax.clientWidth / 2;
+            let cy = customMouseParallax.clientHeight / 2;
+
+            console.log(evt);
+
+            let mouseX = evt.clientX,
+                mouseY = evt.clientY;
+
+            let mousePosition = `Left corner x: ${mouseX} and y: ${mouseY} `;
+            customMouseLeft.innerHTML = mousePosition;
+
+            let fromCenterX = cx - mouseX;
+            let fromCenterY = cy - mouseY;
+
+            let mouseCenterPosition = `From center x: ${fromCenterX} and y: ${fromCenterY} `;
+            customMouseCenter.innerHTML = mouseCenterPosition;
+
+            customEagle.style.transform = 'translateX(' + fromCenterX / 10 + '%) translateY(' + fromCenterY / 10 + '%)';
+            customFish.style.transform = 'translateX(' + fromCenterX / 300 + '%) translateY(' + fromCenterY / 300 + '%)';
+
+        });
+    </script>
+</body>
+
+</html>
